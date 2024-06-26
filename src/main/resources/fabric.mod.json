@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "pon-utilities",
+	"version": "${version}",
+	"name": "Pon Utilities",
+	"description": "This is a mod for items giving special abilities.",
+	"authors": [
+		"Ponduzn"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/pon-utilities/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.pon.utilities.PonUtilities"
+		],
+		"client": [
+			"net.pon.utilities.PonUtilitiesClient"
+		],
+		"fabric-datagen": [
+			"net.pon.utilities.PonUtilitiesDataGenerator"
+		]
+	},
+	"mixins": [
+		"pon-utilities.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
