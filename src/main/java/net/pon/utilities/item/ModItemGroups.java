@@ -10,15 +10,17 @@ import net.minecraft.util.Identifier;
 import net.pon.utilities.PonUtilities;
 
 public class ModItemGroups {
+    
     public static final ItemGroup RING_GROUP = Registry.register(Registries.ITEM_GROUP, 
-        new Identifier(PonUtilities.MOD_ID, "rings"),
-         FabricItemGroup.builder().displayName(Text.translatable("itemgroup.rings"))
-            .icon(() -> new ItemStack(ModItems.RINGOFFLIGHT)).entries((displayContext, entries) -> {
+         Identifier.of(PonUtilities.MOD_ID, "rings"),
+         FabricItemGroup.builder()
+            .displayName(Text.translatable("itemgroup.rings"))
+            .icon(() -> new ItemStack(ModItems.RINGOFFLIGHT))
+            .entries((displayContext, entries) -> {
                 entries.add(ModItems.RINGOFFLIGHT);
                 entries.add(ModItems.RINGOFHASTE);
 
             }).build());
-
             
 
     public static void registerItemGroups() {
