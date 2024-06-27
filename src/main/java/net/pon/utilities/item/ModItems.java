@@ -12,10 +12,12 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item RINGOFFLIGHT = registerItem("RingofFlight", new Item(new Item.Settings()));
+    public static final Item RINGOFFLIGHT = registerItem("ringofflight", new Item(new Item.Settings()));
+    public static final Item RINGOFHASTE = registerItem("ringofhaste", new Item(new Item.Settings()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(RINGOFFLIGHT);
+        entries.add(RINGOFHASTE);
     }
 
     private static Item registerItem(String name, Item item) {

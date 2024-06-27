@@ -1,3 +1,6 @@
 {
-    "item.ponutils.RingofFlight": "Ring of Flight"
+    "item.ponutils.ringofflight": "Ring of Flight",
+    "item.ponutils.ringofhaste": "Ring of Haste",
+
+    "itemgroup.rings": "Ring group"
 }

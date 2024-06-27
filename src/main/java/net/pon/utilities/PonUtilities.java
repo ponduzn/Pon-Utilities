@@ -1,6 +1,7 @@
 package net.pon.utilities;
 
 import net.fabricmc.api.ModInitializer;
+import net.pon.utilities.item.ModItemGroups;
 import net.pon.utilities.item.ModItems;
 
 import org.slf4j.Logger;
@@ -13,7 +14,7 @@ public class PonUtilities implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 	}
 }
