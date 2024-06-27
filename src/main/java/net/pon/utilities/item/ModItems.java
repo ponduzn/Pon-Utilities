@@ -12,8 +12,11 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item RINGOFFLIGHT = registerItem("ringofflight", new Item(new Item.Settings()));
-    public static final Item RINGOFHASTE = registerItem("ringofhaste", new Item(new Item.Settings()));
+    public static final Item RINGOFFLIGHT = registerItem("ringofflight", new Item(new Item.Settings().maxCount(1).fireproof()));
+    public static final Item RINGOFHASTE = registerItem("ringofhaste", new Item(new Item.Settings().maxCount(1).fireproof()));
+
+    public static final Item RINGOFMOVESPEED = registerItem("ringofmovespeed", new Item(new Item.Settings().maxCount(1).fireproof()));
+    public static final Item RINGOFMAGNET = registerItem("ringofmagnet", new Item(new Item.Settings().maxCount(1).fireproof()));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(RINGOFFLIGHT);
@@ -31,5 +34,8 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
 
     }
+
+    
+    
 
 }
