@@ -1,4 +1,4 @@
-package net.pon.utilities.item.custom;
+package assets.ponutils.models.item;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -10,14 +10,14 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 
-public class RingOfHaste extends Item {
-    public RingOfHaste(Settings settings) { super(settings); }
+public class ringofmovespeed extends Item {
+    public ringofmovespeed(Settings settings) { super(settings); }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (!user.isCreative()) {
             user.setMovementSpeed(50f);
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 999999, 3));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 999999, 3));
             //mining speed > move speed
         }
         else {

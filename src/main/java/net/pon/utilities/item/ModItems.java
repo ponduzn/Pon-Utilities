@@ -8,19 +8,25 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.pon.utilities.item.custom.RingOfFlight;
+import net.pon.utilities.item.custom.RingOfHaste;
+import net.pon.utilities.item.custom.RingOfMoveSpeed;
 
 
 public class ModItems {
 
-    public static final Item RINGOFFLIGHT = registerItem("ringofflight", new Item(new Item.Settings().maxCount(1).fireproof()));
-    public static final Item RINGOFHASTE = registerItem("ringofhaste", new Item(new Item.Settings().maxCount(1).fireproof()));
 
-    public static final Item RINGOFMOVESPEED = registerItem("ringofmovespeed", new Item(new Item.Settings().maxCount(1).fireproof()));
+    public static final Item RINGOFFLIGHT = registerItem("ringofflight", new RingOfFlight(new Item.Settings().maxCount(1).fireproof()));
+    public static final Item RINGOFHASTE = registerItem("ringofhaste", new RingOfHaste(new Item.Settings().maxCount(1).fireproof()));
+    public static final Item RINGOFMOVESPEED = registerItem("ringofmovespeed", new RingOfMoveSpeed(new Item.Settings().maxCount(1).fireproof()));
+
     public static final Item RINGOFMAGNET = registerItem("ringofmagnet", new Item(new Item.Settings().maxCount(1).fireproof()));
+
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(RINGOFFLIGHT);
         entries.add(RINGOFHASTE);
+        entries.add(RINGOFMOVESPEED);
     }
 
     private static Item registerItem(String name, Item item) {
@@ -34,8 +40,4 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
 
     }
-
-    
-    
-
 }

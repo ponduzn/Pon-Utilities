@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "#D#",
+        "DSD",
+        "#D#"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:netherite_ingot"
+        },
+      "S": {
+        "item": "minecraft:nether_star"
+        },
+      "D": {
+        "item": "minecraft:feather"
+      }
+    },
+    "result": {
+        "id": "ponutils:ringofmovespeed",
+        "count": 1
+    }
+}
