@@ -1,7 +1,5 @@
 package net.pon.utilities.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItem;
-import net.fabricmc.fabric.api.item.v1.FabricItem.Settings;
 import net.minecraft.item.*;
 import net.pon.utilities.PonUtilities;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;

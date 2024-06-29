@@ -1,7 +1,6 @@
 package net.pon.utilities.item.custom;
 
 import net.minecraft.entity.EntityType;
-import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.ItemEntity;
@@ -13,7 +12,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
-import org.w3c.dom.Text;
 
 import java.util.List;
 
