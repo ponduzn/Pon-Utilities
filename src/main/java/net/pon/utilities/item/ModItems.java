@@ -19,7 +19,7 @@ public class ModItems {
     public static final Item RINGOFFLIGHT = registerItem("ringofflight", new RingOfFlight(new Item.Settings().maxCount(1).fireproof()));
     public static final Item RINGOFHASTE = registerItem("ringofhaste", new RingOfHaste(new Item.Settings().maxCount(1).fireproof()));
     public static final Item RINGOFMOVESPEED = registerItem("ringofmovespeed", new RingOfMoveSpeed(new Item.Settings().maxCount(1).fireproof()));
-    public static final Item RINGOFMAGNET = registerItem("ringofmagnet", new RingOfMagnet(ToolMaterials.IRON,20, 1, new Item.Settings().maxCount(1)));
+    public static final Item RINGOFMAGNET = registerItem("ringofmagnet", new RingOfMagnet(ToolMaterials.IRON,20, 0, new Item.Settings().maxCount(1)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         //entries.add(CUSTOM_ITEM_NAME);

@@ -22,7 +22,7 @@ public class RingOfHaste extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (user.isAlive()) {
             if (!user.hasStatusEffect(StatusEffects.HASTE)){
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 9999, 2));
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, -1, 2));
             }
             else if (user.hasStatusEffect(StatusEffects.HASTE)) {
                 user.removeStatusEffect(StatusEffects.HASTE);

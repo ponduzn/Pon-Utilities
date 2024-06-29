@@ -22,7 +22,7 @@ public class RingOfMoveSpeed extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (user.isAlive()) {
             if (!user.hasStatusEffect(StatusEffects.SPEED)){
-                user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 9999, 2));
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, -1, 2));
             }
             else if (user.hasStatusEffect(StatusEffects.SPEED)) {
                 user.removeStatusEffect(StatusEffects.SPEED);
