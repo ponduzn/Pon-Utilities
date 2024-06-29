@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+        "# #",
+        "S S",
+        "###"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:iron_ingot"
+        },
+      "S": {
+        "item": "minecraft:gold_ingot"
+        }
+    },
+    "result": {
+        "id": "ponutils:ringofmagnet",
+        "count": 1
+    }
+}

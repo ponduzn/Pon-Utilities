@@ -19,6 +19,8 @@ public class ModItemGroups {
             .entries((displayContext, entries) -> {
                 entries.add(ModItems.RINGOFFLIGHT);
                 entries.add(ModItems.RINGOFHASTE);
+                entries.add(ModItems.RINGOFMOVESPEED);
+                entries.add(ModItems.RINGOFMAGNET);
 
             }).build());
             

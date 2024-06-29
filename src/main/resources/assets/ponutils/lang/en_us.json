@@ -1,6 +1,8 @@
 {
     "item.ponutils.ringofflight": "Ring of Flight",
     "item.ponutils.ringofhaste": "Ring of Haste",
+    "item.ponutils.ringofmovespeed": "Ring of Movement Speed",
+    "item.ponutils.ringofmagnet": "Ring of Magnetism",
 
     "itemgroup.rings": "Pon Utilities"
 }
