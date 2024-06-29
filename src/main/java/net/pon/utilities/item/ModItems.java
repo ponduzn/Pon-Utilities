@@ -19,14 +19,17 @@ public class ModItems {
     public static final Item RINGOFFLIGHT = registerItem("ringofflight", new RingOfFlight(new Item.Settings().maxCount(1).fireproof()));
     public static final Item RINGOFHASTE = registerItem("ringofhaste", new RingOfHaste(new Item.Settings().maxCount(1).fireproof()));
     public static final Item RINGOFMOVESPEED = registerItem("ringofmovespeed", new RingOfMoveSpeed(new Item.Settings().maxCount(1).fireproof()));
-    //public static final Item RINGOFMAGNET = registerItem("ringofmagnet", new RingOfMagnet(new Item.Settings().maxCount(1).fireproof()));
     public static final Item RINGOFMAGNET = registerItem("ringofmagnet", new RingOfMagnet(ToolMaterials.IRON,20, 1, new Item.Settings().maxCount(1)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
+        //entries.add(CUSTOM_ITEM_NAME);
+    }
+
+    private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
+        entries.add(RINGOFMAGNET);
         entries.add(RINGOFFLIGHT);
         entries.add(RINGOFHASTE);
         entries.add(RINGOFMOVESPEED);
-        entries.add(RINGOFMAGNET);
     }
 
     private static Item registerItem(String name, Item item) {
@@ -38,6 +41,7 @@ public class ModItems {
         PonUtilities.LOGGER.info("Registering Mod Items for " + PonUtilities.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsItemGroup);
 
     }
 }

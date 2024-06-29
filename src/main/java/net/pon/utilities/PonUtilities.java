@@ -1,6 +1,7 @@
 package net.pon.utilities;
 
 import net.fabricmc.api.ModInitializer;
+import net.pon.utilities.ModLootTable.ModLootTableModifiers;
 import net.pon.utilities.item.ModItemGroups;
 import net.pon.utilities.item.ModItems;
 
@@ -16,5 +17,6 @@ public class PonUtilities implements ModInitializer {
 	public void onInitialize() {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
+		ModLootTableModifiers.modifyLootTables();
 	}
 }
