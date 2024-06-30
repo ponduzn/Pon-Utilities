@@ -1,6 +1,7 @@
 Adding various rings ( and possibly more in the future ), that does certain things.
 
 v0.0.1.
+
 Ring of movement speed, increases movement speed.
 Ring of haste, increases mining speed.
 Ring of flight, gives creative flight.
