@@ -23,6 +23,7 @@ public class RingOfFlight extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack mainHand = user.getStackInHand(hand);
         if (!user.getAbilities().flying && !user.getAbilities().allowFlying) {
             user.getAbilities().allowFlying = true;
             user.getAbilities().flying = true;
@@ -33,7 +34,8 @@ public class RingOfFlight extends Item {
             user.getAbilities().flying = false;
             user.removeStatusEffect(StatusEffects.ABSORPTION);
         }
-        return super.use(world, user, hand);
+        //return super.use(world, user, hand);
+        return TypedActionResult.success(mainHand);
 
     }
 

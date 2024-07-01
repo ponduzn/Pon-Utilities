@@ -4,5 +4,7 @@
     "item.ponutils.ringofmovespeed": "Ring of Movement Speed",
     "item.ponutils.ringofmagnet": "Ring of Magnetism",
 
-    "itemgroup.rings": "Pon Utilities"
+    "itemgroup.rings": "Pon Utilities",
+
+    "effect.ponutils.magnetism": "Magnetic effect"
 }

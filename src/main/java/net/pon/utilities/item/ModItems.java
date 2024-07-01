@@ -19,7 +19,7 @@ public class ModItems {
     public static final Item RINGOFFLIGHT = registerItem("ringofflight", new RingOfFlight(new Item.Settings().maxCount(1).fireproof()));
     public static final Item RINGOFHASTE = registerItem("ringofhaste", new RingOfHaste(new Item.Settings().maxCount(1).fireproof()));
     public static final Item RINGOFMOVESPEED = registerItem("ringofmovespeed", new RingOfMoveSpeed(new Item.Settings().maxCount(1).fireproof()));
-    public static final Item RINGOFMAGNET = registerItem("ringofmagnet", new RingOfMagnet(ToolMaterials.IRON,20, 0, new Item.Settings().maxCount(1)));
+    public static final Item RINGOFMAGNET = registerItem("ringofmagnet", new RingOfMagnet(ToolMaterials.IRON,20, 5, new Item.Settings().maxCount(1)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         //entries.add(CUSTOM_ITEM_NAME);
@@ -34,7 +34,6 @@ public class ModItems {
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(PonUtilities.MOD_ID, name), item);
-
     }
 
     public static void registerModItems () {

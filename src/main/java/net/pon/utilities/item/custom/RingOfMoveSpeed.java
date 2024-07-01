@@ -20,6 +20,7 @@ public class RingOfMoveSpeed extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack mainHand = user.getStackInHand(hand);
         if (user.isAlive()) {
             if (!user.hasStatusEffect(StatusEffects.SPEED)){
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, -1, 2));
@@ -29,7 +30,8 @@ public class RingOfMoveSpeed extends Item {
             }
         }
 
-        return super.use(world, user, hand);
+        //return super.use(world, user, hand);
+        return TypedActionResult.success(mainHand);
     }
 
     @Override

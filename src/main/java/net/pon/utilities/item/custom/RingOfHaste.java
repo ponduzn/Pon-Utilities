@@ -3,6 +3,7 @@ package net.pon.utilities.item.custom;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
@@ -20,6 +21,7 @@ public class RingOfHaste extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+        ItemStack mainHand = user.getStackInHand(hand);
         if (user.isAlive()) {
             if (!user.hasStatusEffect(StatusEffects.HASTE)){
                 user.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, -1, 2));
@@ -29,7 +31,8 @@ public class RingOfHaste extends Item {
             }
         }
 
-        return super.use(world, user, hand);
+        //return super.use(world, user, hand);
+        return TypedActionResult.success(mainHand);
     }
 
     @Override

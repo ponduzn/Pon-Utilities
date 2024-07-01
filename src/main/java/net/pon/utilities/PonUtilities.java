@@ -5,6 +5,7 @@ import net.pon.utilities.ModLootTable.ModLootTableModifiers;
 import net.pon.utilities.item.ModItemGroups;
 import net.pon.utilities.item.ModItems;
 
+import net.pon.utilities.statuseffects.CustomStatusEffects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,5 +19,6 @@ public class PonUtilities implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModLootTableModifiers.modifyLootTables();
+		CustomStatusEffects.registerEffects();
 	}
 }
